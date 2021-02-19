@@ -1,0 +1,16 @@
+<div class="list-container">
+  <h2>Pokéballs lancées:<br />{{ nbTentatives ? nbTentatives : '0' }}</h2>
+  <h2>
+    Pokedex: <br/>
+    {{ nbPokemonsCaptures }} / {{nbPokemonsTotal}}
+  </h2>
+  <ul class="liste-pokemons">
+    <li *ngFor="let pokemon of pokemons" class="pokemon-item">
+        <img
+          [alt]="pokemon.name"
+          [src]="pokemon.isCaught ? 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png' : pokemon.imageUrl"
+        />
+        {{ pokemon.name }}
+    </li>
+  </ul>
+</div>

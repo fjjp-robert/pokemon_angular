@@ -1,0 +1,19 @@
+<div class="screen-display">
+  <!--<div style="width:100%; height:100%; position: absolute;">-->
+  <div *ngIf="!pokemonOnScreen && nbPokemonsCaptures === 0" class="screen-logo">GAME BOY</div>
+  <div *ngIf="!pokemonOnScreen && nbPokemonsCaptures === 0" class="screen-logo-shadow">GAME BOY</div>
+  <div *ngIf="!pokemonOnScreen && nbPokemonsCaptures === 0" class="nintendo-logo-screen">Nintendo&reg;</div>
+<!--</div>-->
+  <!-- Bloc affiché si un pokémon est présent -->
+  <div *ngIf="pokemonOnScreen" >
+    <img 
+      [src]="pokemonOnScreen.isCaught ? 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png' : pokemonOnScreen.imageUrl" 
+      [alt]="pokemonOnScreen.name" />
+    <h3 class='screen-name'>{{ pokemonOnScreen.isCaught ? 'Capturé !' : pokemonOnScreen.name }}</h3>
+  </div>
+  <!-- Bloc de fin : affiché seulement s'il n'y a plus de pokemon à capturer -->
+  <div *ngIf="!pokemonOnScreen && nbPokemonsCaptures !== 0 && nbPokemonsCaptures === nbPokemonsTotal">
+    <h3>Partie terminée !</h3>
+    <p className='screen-ending-text'>Pokédex rempli à 100%<br/>Il vous a fallu {{ getNbTentativesTotal() }} tentatives</p>
+  </div>
+</div>
