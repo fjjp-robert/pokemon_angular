@@ -72,7 +72,7 @@ export class PokemonService {
       );
   }
 
-  attemptCatchPokemon(pokemon: Pokemon) {
+  attemptCatchPokemon(pokemon: Pokemon):void {
     if (pokemon) {
       // on incrémente le compteur
       this.tentativesCaptures+=1;

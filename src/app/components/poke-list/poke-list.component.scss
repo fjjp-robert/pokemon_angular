@@ -1,0 +1,29 @@
+ul.liste-pokemons {
+  width: 190px;
+  max-height: 390px;
+  overflow-y: scroll;
+}
+
+.list-container {
+  margin: 0 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pokemon-item {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.pokemon-item img {
+  width: 28px;
+}
+.pokemon-item img[alt='Caught'] {
+  width: 24px;
+  margin-right: 2px;
+  margin-left: 2px;
+}

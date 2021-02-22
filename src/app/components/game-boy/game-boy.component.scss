@@ -45,6 +45,7 @@
   color: darkgray;
   font-family: 'Gill Sans';
   font-size: xx-small;
+  margin-top: 3px;
 }
 
 .screen-box {
@@ -457,6 +458,18 @@
   z-index: 1;
 }
 
+.select,
+.start,
+.b,
+.a {
+  user-select: none;
+}
+.button-select,
+.button-start,
+.b,
+.a {
+  cursor: pointer;
+}
 
 /**
 couleur alternative de la console

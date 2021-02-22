@@ -5,4 +5,28 @@
 .loader {
   position: absolute;
   top: 50%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choix-couleurs {
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+}
+.bloc-couleur {
+  display: flex;
+  flex-direction: row;
+}
+.bloc-couleur input{
+  margin-top: 1px;
+  vertical-align: top;
+  height: 21px;
+}
+.bloc-couleur label {
+  vertical-align: top;
+  text-transform: capitalize;
 }
